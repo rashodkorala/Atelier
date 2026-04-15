@@ -39,7 +39,7 @@ Takes a freeform client brief and generates a justified brand design foundation:
 |---|---|
 | ML classifier | scikit-learn (TF-IDF + LogisticRegression), pandas, NumPy |
 | AI reasoning | Anthropic Claude API — structured tool use, prompt caching |
-| Backend | Python 3.11+, FastAPI, Pydantic, Uvicorn |
+| Backend | Python 3.11+, FastAPI, Pydantic (≥2.12), Uvicorn |
 | Frontend | React 18, Vite |
 | Validation | Pure Python + NumPy (WCAG luminance formula, HSL harmony) |
 
@@ -81,7 +81,7 @@ Atelier/
 
 ### Prerequisites
 
-- Python 3.11+
+- Python **3.11+** (use **Pydantic ≥2.12** so `pydantic-core` has wheels on 3.14 — see `requirements.txt`)
 - Node.js 18+
 - An [Anthropic API key](https://console.anthropic.com)
 
@@ -92,8 +92,8 @@ Atelier/
 git clone <repo-url>
 cd Atelier
 
-# Create and activate a virtual environment
-python -m venv .venv
+# Create and activate a virtual environment (use python3 if `python` is not on PATH)
+python3 -m venv .venv
 source .venv/bin/activate      # Windows: .venv\Scripts\activate
 
 # Install dependencies

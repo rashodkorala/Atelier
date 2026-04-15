@@ -1,0 +1,6 @@
+[project]
+name = "atelier"
+version = "0.1.0"
+description = "Internal AI-powered brand design aid"
+readme = "README.md"
+requires-python = ">=3.11"
